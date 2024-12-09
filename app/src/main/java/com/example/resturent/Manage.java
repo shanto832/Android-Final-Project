@@ -258,7 +258,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Manage extends AppCompatActivity {
 
-    private Button btnAddFood, btnSeeCurrentOrders, btnTransactionHistory, btnCustomerDetails, btnWaiterDetails, btnTakeOrder;
+    private Button addTable, btnAddFood, btnSeeCurrentOrders, btnTransactionHistory, btnCustomerDetails, btnWaiterDetails, btnTakeOrder;
     private ImageView sharpImage, blurredImage;
 
     @Override
@@ -273,6 +273,7 @@ public class Manage extends AppCompatActivity {
         btnCustomerDetails = findViewById(R.id.btnCustomerDetails);
         btnWaiterDetails = findViewById(R.id.btnWaiterDetails);
         btnTakeOrder = findViewById(R.id.btnTakeOrder);
+        addTable = findViewById(R.id.addTable);
 
         // Initialize image views for sharp and blurred images
         sharpImage = findViewById(R.id.sharpImage);
@@ -297,6 +298,8 @@ public class Manage extends AppCompatActivity {
         animateButton(btnCustomerDetails, 300);
         animateButton(btnWaiterDetails, 400);
         animateButton(btnTakeOrder, 500);
+        animateButton(addTable, 600);
+
     }
 
     // Setup button click listeners
@@ -328,6 +331,10 @@ public class Manage extends AppCompatActivity {
 
         btnTakeOrder.setOnClickListener(v -> {
             Intent intent = new Intent(Manage.this, WaiterCredentialActivity.class);
+            startActivity(intent);
+        });
+        addTable.setOnClickListener(v -> {
+            Intent intent = new Intent(Manage.this, ManageTableActivity.class);
             startActivity(intent);
         });
     }

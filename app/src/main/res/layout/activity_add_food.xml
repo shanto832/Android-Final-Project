@@ -174,6 +174,30 @@
             android:layout_marginBottom="8dp"
             android:backgroundTint="#000000"
             android:textColor="#FFFFFF" />
+        <Button
+            android:id="@+id/updateFood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="update price/quantity"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="#000000"
+            android:textColor="#FFFFFF" />
+        <Button
+            android:id="@+id/updateTable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="update Table"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="#000000"
+            android:textColor="#FFFFFF" />
+        <Button
+            android:id="@+id/tablecustomer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Legacy"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="#000000"
+            android:textColor="#FFFFFF" />
     </LinearLayout>
 
 </LinearLayout>

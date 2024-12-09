@@ -245,19 +245,35 @@ public class AddFoodActivity extends AppCompatActivity {
         Button submitButton = findViewById(R.id.submitButton);
         Button addMoreButton = findViewById(R.id.addMoreButton);
         Button adminHomeButton = findViewById(R.id.adminHomeButton);
-
+        Button updateFood= findViewById(R.id.updateFood);
+        Button updateTable= findViewById(R.id.updateTable);
+        Button tablecustomer= findViewById(R.id.tablecustomer);
         // Set up the animation for each button
         slideUpAnimation(selectImageButton);
         slideUpAnimation(submitButton);
         slideUpAnimation(addMoreButton);
         slideUpAnimation(adminHomeButton);
-
+        slideUpAnimation(updateFood);
+        slideUpAnimation(updateTable);
+        slideUpAnimation(tablecustomer);
         selectImageButton.setOnClickListener(v -> openImagePicker());
         submitButton.setOnClickListener(v -> submitFoodItem());
         addMoreButton.setOnClickListener(v -> clearInputFields());
 
         adminHomeButton.setOnClickListener(v -> {
             Intent intent = new Intent(AddFoodActivity.this, Manage.class);
+            startActivity(intent);
+        });
+        updateFood.setOnClickListener(v -> {
+            Intent intent = new Intent(AddFoodActivity.this, UpdateFoodActivity.class);
+            startActivity(intent);
+        });
+        updateTable.setOnClickListener(v -> {
+            Intent intent = new Intent(AddFoodActivity.this, ManageTableActivity.class);
+            startActivity(intent);
+        });
+        tablecustomer.setOnClickListener(v -> {
+            Intent intent = new Intent(AddFoodActivity.this, CustomerTable.class);
             startActivity(intent);
         });
     }
